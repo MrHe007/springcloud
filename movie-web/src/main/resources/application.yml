@@ -1,2 +1,6 @@
 server:
   port: 80
+
+my:
+  dept:
+    url: http://localhost:8001

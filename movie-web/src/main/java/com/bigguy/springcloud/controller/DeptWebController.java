@@ -1,6 +1,7 @@
 package com.bigguy.springcloud.controller;
 
 import com.bigguy.springcloud.entity.Dept;
+import com.bigguy.springcloud.properties.MyProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +17,8 @@ import java.util.List;
 @RestController
 public class DeptWebController {
 
-    private static final String REST_URL_PREFIX = "http://localhost:8001";
+    @Autowired
+    MyProperties properties;
 
     @Autowired
     private RestTemplate restTemplate;
@@ -24,23 +26,20 @@ public class DeptWebController {
     @RequestMapping(value="/consumer/dept/add")
     public boolean add(Dept dept)
     {
-        return restTemplate.postForObject(REST_URL_PREFIX+"/dept/add", dept, Boolean.class);
+        return restTemplate.postForObject(properties.getDept().getUrl()+"/dept/add", dept, Boolean.class);
     }
 
     @RequestMapping(value="/consumer/dept/get/{id}")
     public Dept get(@PathVariable("id") Long id)
     {
-        return restTemplate.getForObject(REST_URL_PREFIX+"/dept/get/"+id, Dept.class);
+        return restTemplate.getForObject(properties.getDept().getUrl()+"/dept/get/"+id, Dept.class);
     }
 
     @SuppressWarnings("unchecked")
     @RequestMapping(value="/consumer/dept/list")
     public List<Dept> list()
     {
-        return restTemplate.getForObject(REST_URL_PREFIX+"/dept/list", List.class);
+        return restTemplate.getForObject(properties.getDept().getUrl()+"/dept/list", List.class);
     }
-
-
-
 }
 

@@ -18,6 +18,7 @@ public class DeptController
     @Autowired
     private IDeptService service;
 
+    // POST 方式
     @RequestMapping(value="/dept/add",method=RequestMethod.POST)
     public boolean add(@RequestBody Dept dept)
     {
