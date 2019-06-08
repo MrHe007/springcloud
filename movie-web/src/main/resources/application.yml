@@ -4,3 +4,12 @@ server:
 my:
   dept:
     url: http://localhost:8001
+
+spring:
+  application:
+    name: movie-web
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
