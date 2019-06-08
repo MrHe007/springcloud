@@ -8,6 +8,7 @@
         <module>movie-api</module>
         <module>movie-provider</module>
         <module>movie-web</module>
+        <module>movie-eureka</module>
     </modules>
 
     <groupId>com.bigguy.test</groupId>

@@ -2,3 +2,5 @@
 .idea/
 movie-web/target/
 movie-provider/target/
+*.class
+movie-eureka/target/
