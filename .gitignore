@@ -1,0 +1,4 @@
+*.iml
+.idea/
+movie-web/target/
+movie-provider/target/
