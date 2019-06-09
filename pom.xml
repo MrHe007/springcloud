@@ -9,6 +9,7 @@
         <module>movie-provider</module>
         <module>movie-web</module>
         <module>movie-eureka</module>
+        <module>movie-feign-web</module>
     </modules>
 
     <groupId>com.bigguy.test</groupId>

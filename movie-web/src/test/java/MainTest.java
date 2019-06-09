@@ -16,12 +16,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = DeptWebApp.class)
-//@Import(DeptWebApp.class)
 public class MainTest {
-
     @Autowired
     LoadBalancerClient client;
-
     @Test
     public void testBalance(){
         String serviceId = "MICROSERVICECLOUD-DEPT";
@@ -29,10 +26,5 @@ public class MainTest {
             ServiceInstance instance = client.choose(serviceId);
             System.out.println(i + " -- " + instance.getHost() + instance.getPort());
         }
-
-
-
     }
-
-
 }

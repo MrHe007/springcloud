@@ -9,9 +9,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>movie-web</artifactId>
+    <artifactId>movie-feign-web</artifactId>
 
     <dependencies>
+        <!--feign-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+        </dependency>
+
         <!-- 引入SpringBoot的单元测试 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
