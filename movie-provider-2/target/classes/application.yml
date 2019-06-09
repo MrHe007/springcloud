@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8002
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
   type-aliases-package: com.atguigu.springcloud.entities    # 所有Entity别名类所在包
@@ -25,5 +25,5 @@ eureka:
     service-url:
       defaultZone: http://localhost:7001/eureka
   instance:
-    instance-id: movie-provider-8001               # 显示
+    instance-id: movie-provider-8002               # 显示
     prefer-ip-address: true                 # 显示完整IP地址

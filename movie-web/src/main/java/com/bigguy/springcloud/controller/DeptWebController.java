@@ -32,17 +32,8 @@ public class DeptWebController {
     @RequestMapping(value="/consumer/dept/get/{id}")
     public Dept get(@PathVariable("id") Long id)
     {
-
-        String url = "";
-        List<ServiceInstance> serviceInstanceList = client.getInstances("MICROSERVICECLOUD-DEPT");
-        if(serviceInstanceList!=null && serviceInstanceList.size()>0){
-            ServiceInstance serviceInstance = serviceInstanceList.get(0);
-            String hostName = serviceInstance.getHost();
-            int port = serviceInstance.getPort();
-            url = "http://" + hostName +":"+ port;
-        }
-
-
+        String serviceId = "microservicecloud-dept";
+        String url = "http://" + serviceId;
         return restTemplate.getForObject(url+"/dept/get/"+id, Dept.class);
     }
 

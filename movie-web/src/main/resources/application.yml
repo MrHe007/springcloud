@@ -13,3 +13,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka
+
+info:
+  app.name: bigguy-microservice-web
+  company.name: www.bigguy-web.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
