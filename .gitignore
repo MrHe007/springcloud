@@ -4,3 +4,7 @@ movie-web/target/
 movie-provider/target/
 *.class
 movie-eureka/target/
+movie-zuul/target/
+movie-config-client/target/classes/application.yml
+movie-config-server/target/classes/application.yml
+movie-config-client/target/

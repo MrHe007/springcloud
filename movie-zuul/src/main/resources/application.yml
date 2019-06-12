@@ -1,0 +1,24 @@
+server:
+  port: 6677
+spring:
+  application:
+    name: movie-zuul-gateway
+
+
+zuul:
+#  ignored-services: "*"       # 忽略所有服务
+  routes:
+    dept-services:
+      serviceId: MICROSERVICECLOUD-DEPT
+      path: /dept-service/**
+  prefix: /api
+  strip-prefix: true
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    instance-id: movie-zuul-gateway
+    prefer-ip-address: true

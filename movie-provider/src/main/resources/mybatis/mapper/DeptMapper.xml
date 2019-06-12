@@ -2,15 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.bigguy.springcloud.dao.IDeptDao">
+<mapper namespace="IDeptDao">
 
-    <select id="findById" resultType="com.bigguy.springcloud.entity.Dept" parameterType="Long">
+    <select id="findById" resultType="com.bigguy.springcloud.configclient.entity.Dept" parameterType="Long">
    select deptno,dname,db_source from dept where deptno=#{deptno};
   </select>
-    <select id="findAll" resultType="com.bigguy.springcloud.entity.Dept">
+    <select id="findAll" resultType="com.bigguy.springcloud.configclient.entity.Dept">
    select deptno,dname,db_source from dept;
   </select>
-    <insert id="addDept" parameterType="com.bigguy.springcloud.entity.Dept">
+    <insert id="addDept" parameterType="com.bigguy.springcloud.configclient.entity.Dept">
    INSERT INTO dept(dname,db_source) VALUES(#{dname},DATABASE());
   </insert>
 

@@ -10,6 +10,10 @@
         <module>movie-web</module>
         <module>movie-eureka</module>
         <module>movie-feign-web</module>
+        <module>movie-zuul</module>
+        <module>movie-config-server</module>
+        <module>movie-client</module>
+        <module>movie-config-client</module>
     </modules>
 
     <groupId>com.bigguy.test</groupId>
